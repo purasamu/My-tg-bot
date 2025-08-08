@@ -11,7 +11,11 @@ from tinydb import *
 import copy
 import re
 >>>>>>> 0f7a004 (Initial commit)
-updater = Updater('8192198859:AAFlFmKDANGsM51kfdAoAYdaBoJjrfDqFXo', use_context=True)
+import os 
+
+
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+updater = Updater('BOT_TOKEN', use_context=True)
 dispatcher = updater.dispatcher
 
 db = TinyDB('players.json')
